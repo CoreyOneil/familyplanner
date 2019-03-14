@@ -1,0 +1,1181 @@
+/*!
+Theme Name: familyplanner
+Theme URI: http://underscores.me/
+Author: Corey O\'Neil
+Author URI: http://www.familyplanner.ca
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: familyplanner
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+familyplanner is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\//\/\/\/\
+ 
+  1. Miscellanous
+    - Variables
+    - Mixins
+    - Normalize
+    - General
+    - Forms
+  2. Navigation
+  3. Header
+  4. Posts
+  5. Pages
+    - Pages
+    - Home
+    - Recipe
+  6. Sidebar
+  7. Widgets
+  8. Footer
+*/
+/* ---------------------------------------------------------------------- 1. Miscellanous */
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+	 ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+	 ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+	 ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+/* Forms
+	 ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+	 ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Misc
+	 ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+# Elements
+# Accessibility
+# Alignments
+# Clearings
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+p {
+  margin-bottom: 1.5em;
+}
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+blockquote {
+  margin: 0 1.5em;
+}
+address {
+  margin: 0 0 1.5em;
+}
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+code,
+kbd,
+tt,
+var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+big {
+  font-size: 125%;
+}
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 1.5em 1.5em;
+}
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.entry-content:before,
+.comment-content:before,
+.site-content:before,
+.site-footer:before,
+.site-header:before,
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-content:after,
+.site-footer:after,
+.site-header:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-content:after,
+.site-footer:after,
+.site-header:after {
+  clear: both;
+}
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+.wp-caption-text {
+  text-align: center;
+}
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em;
+}
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+.gallery-caption {
+  display: block;
+}
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+select {
+  border: 1px solid #ccc;
+}
+textarea {
+  width: 100%;
+}
+/* ---------------------------------------------------------------------- 2. Navigation */
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: #F2EEB6;
+}
+/* a:visited {
+	color: @pblue;
+} */
+a:hover,
+a:focus,
+a:active {
+  color: #B5B5FF;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.content-area {
+  float: right;
+  margin: 0 0 0 -15%;
+  width: 100%;
+}
+.site-main {
+  margin: 0 0 0 15%;
+}
+.nav-tittle {
+  font-family: montez;
+  line-height: .5em;
+  font-size: 1.9vw;
+  padding-left: 30px;
+  font-variant-caps: normal;
+}
+input[type="search"] {
+  max-width: -webkit-fill-available;
+  margin: 50px 5px 5px 5px;
+}
+.nav-logo img {
+  margin: 40px 15px 15px 40px;
+  max-width: -webkit-fill-available;
+}
+.search-submit {
+  margin: 5px 5px 5px 5px;
+}
+#secondary {
+  font-family: optima;
+  font-variant-caps: small-caps;
+  overflow: hidden;
+  width: 15%;
+  background-color: #592411;
+  position: fixed;
+  line-height: 2em;
+  color: #F2EEB6;
+  z-index: 999999;
+  height: 100vh;
+}
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+}
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 38px;
+  font-size: 1.125vw;
+}
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 100%;
+  left: -999em;
+  z-index: 99999;
+}
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+.main-navigation ul ul a {
+  width: 200px;
+}
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+.main-navigation li {
+  position: relative;
+}
+.main-navigation a {
+  display: block;
+  text-decoration: none;
+}
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
+}
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+/* ---------------------------------------------------------------------- 3. Header */
+/* ---------------------------------------------------------------------- 5. Pages */
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+.post,
+.page {
+  margin: 0 0 0;
+}
+.updated:not(.published) {
+  display: none;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 0 0 0;
+}
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word;
+}
+.bypostauthor {
+  display: block;
+}
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+/* ---------------------------------------------------------------------- 7. Widgets */
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+.widget select {
+  max-width: 100%;
+}
+/* ---------------------------------------------------------------------- 8. Footer */
+ul#nav-footer {
+  font-family: optima !important;
+  font-variant-caps: small-caps;
+  list-style: none;
+  display: flex;
+  background-color: #73603D;
+  margin: 0;
+  padding: 10px;
+  margin: 0 0 0 15%;
+  justify-content: center;
+  max-width: 100%;
+}
+ul#nav-footer li {
+  padding: 0 75px 0 75px;
+}
+#colophon {
+  width: 100%;
+}
+ul#nav-footer-social {
+  background-color: #8C452B;
+  font-family: optima !important;
+  font-variant-caps: small-caps;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  margin: 0 0 0 15%;
+  justify-content: center;
+  max-width: 100%;
+}
+ul#nav-footer-social li {
+  padding: 0 75px 0 75px;
+}
+.home-spacer {
+  color: #F2EEB6;
+  font-size: 20px;
+}
+.tester1 {
+  clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 100%, 75% 97.5%, 50% 100%, 25% 97.5%, 0 100%, 0% 35%, 0 0) !important;
+  background-color: #fff !important;
+}
+.tester2 {
+  clip-path: polygon(50% 0%, 75% 2.5%, 100% 0, 100% 100%, 75% 97.5%, 50% 100%, 25% 97.5%, 0 100%, 0 0, 25% 2.5%) !important;
+  background-color: #fff !important;
+}
+.tester3 {
+  clip-path: polygon(50% 0%, 75% 2.5%, 100% 0, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0 0, 25% 2.5%) !important;
+  background-color: #fff !important;
+}
+p.wp-block-cover-text {
+  font-size: 1vw !important;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: optima;
+  opacity: 0.8;
+}
+.wp-block-cover,
+.wp-block-cover-image {
+  margin: 0 !important;
+  clip-path: url(../img/hometop.svg);
+}
+.bottom-section {
+  height: 50%;
+}
+.bottom-aligner {
+  height: 80%;
+  vertical-align: bottom;
+}
+.wp-block-cover,
+.wp-block-cover-image {
+  height: 50vw;
+}
+h1.fp-site-tittle {
+  font-family: montez;
+  font-size: 7vw;
+  color: #213140;
+  margin: 0;
+  padding: 0;
+}
+.entry-content {
+  background-color: #F2EEB6;
+}
+.content-area {
+  margin-top: 0px !important;
+}
+.fp-img-breakie {
+  padding-bottom: 13px;
+}
+.fp-img-supper {
+  padding-bottom: 18px;
+  padding-top: 15px;
+}
+.fp-meal-cat,
+.fp-meal-text,
+.fp-img-supper,
+.fp-img-breakie,
+.fp-img-lunch {
+  text-align: center;
+  color: #213140;
+}
+.wp-block-columns.has-3-columns {
+  padding-left: 40px;
+}
+.fp-recipe-title {
+  font-family: montez;
+  text-align: center;
+  margin: 0;
+  font-size: 7vw;
+  color: #213140;
+}
+.timely img,
+#ai1ec-container img {
+  max-width: 100% !important;
+}
+.timely {
+  max-width: 99.9%;
+  padding: 0 10px 0 12px;
+}
+.fp-choreslist-title {
+  font-family: montez;
+  font-size: 7vw;
+  margin: 0 0 -50px 0;
+  padding: 0;
+}
+.fp-choreslist-text {
+  font-family: optima;
+}
+.fp-choreslist-list {
+  border-style: groove;
+  font-family: optima;
+  list-style: none;
+  text-align: center;
+  margin: 0 20px 0 20px;
+  border-color: #8C452B;
+}
+.fp-choreslist-img {
+  margin: 0 20px 0 20px;
+}
+.fp-grolist {
+  margin: 0;
+}
+/* ---------------------------------------------------------------------- 9. Contact */
+label {
+  display: block;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.fp-contact-background {
+  background-color: #F2EEB6;
+}
+.fp-contact-form {
+  display: block;
+  margin: auto;
+  width: 576px;
+  height: 91vh;
+  /*background:url(../img/4b55b0cfb4cbaaabde012d49364ea19a.jpg) !important;*/
+  background-color: white;
+  border-style: solid;
+}
+/* Centre the form within the page */
+.fp-form {
+  margin: 0 auto;
+  width: 459px;
+  padding-top: 15%;
+}
+/* Style the text boxes */
+.fp-input,
+.fp-textarea {
+  width: 439px;
+  height: 27px ;
+  background: #efefef !important;
+  border: 1px solid #dedede !important;
+  padding: 10px !important;
+  margin-top: 13px !important;
+  font-size: 0.9em !important;
+  color: #3a3a3a !important;
+  -moz-border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.fp-textarea {
+  height: 213px;
+}
+/* User Visual feedback*/
+.fp-input:focus,
+.fp-textarea:focus {
+  border: 1px solid #97d6eb;
+}
+/*Button Styling*/
+#submit {
+  width: 127px;
+  height: 38px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-left: 35%;
+  margin-top: 50px !important;
+}
+#submit:hover {
+  opacity: .9;
+}
+/* ---------------------------------------------------------------------- 10. Slider */
+#familyplanner-slider {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+#familyplanner-slider img {
+  position: absolute;
+  transition: all 1000ms ease;
+  display: none;
+  /*         &.standby {
+            display: none;
+        } */
+}
+#familyplanner-slider img.current {
+  left: 0;
+  display: block;
+}
+#familyplanner-slider img.next {
+  left: 100%;
+  transition: none;
+  display: block;
+}
+#familyplanner-slider img.previous {
+  left: -100%;
+  display: block;
+}
+/* .slider-roll {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+} */
+.wp-block-column {
+  margin: 0 !important;
+  height: 88.5vh;
+  max-width: 100%;
+}
+/* @media (min-width: 600px) {
+    
+    .familyplanner-tab {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 559px) {
+
+    .slider-roll {
+        display: none;
+    }
+
+    .familyplanner-tab{
+        display: block;
+    }
+} */

@@ -1,0 +1,61 @@
+
+
+
+#familyplanner-slider {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    img {
+        position: absolute;
+        // max-width: 256px;
+        transition:all 1000ms ease;
+        display: none;
+        
+        &.current {
+            left: 0;
+            display: block;
+        }
+        &.next {
+            left: 100%;
+            transition: none;
+            display: block;
+        }
+        &.previous {
+            left: -100%;
+            display: block;
+        }
+/*         &.standby {
+            display: none;
+        } */
+    }
+}
+/* .slider-roll {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+} */
+
+.wp-block-column {
+    margin: 0 !important;
+    height: 88.5vh;
+    max-width: 100%;    
+}
+
+/* @media (min-width: 600px) {
+    
+    .familyplanner-tab {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 559px) {
+
+    .slider-roll {
+        display: none;
+    }
+
+    .familyplanner-tab{
+        display: block;
+    }
+} */
