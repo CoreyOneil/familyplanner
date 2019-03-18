@@ -50,7 +50,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -1135,9 +1135,7 @@ label {
   position: absolute;
   transition: all 1000ms ease;
   display: none;
-  /*         &.standby {
-            display: none;
-        } */
+
 }
 #familyplanner-slider img.current {
   left: 0;
@@ -1152,30 +1150,10 @@ label {
   left: -100%;
   display: block;
 }
-/* .slider-roll {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-} */
-.wp-block-column {
-  margin: 0 !important;
-  height: 88.5vh;
-  max-width: 100%;
-}
-/* @media (min-width: 600px) {
-    
-    .familyplanner-tab {
-        display: none;
-    }
-    
+
+.slider-roll .wp-block-column {
+    margin: 0px !important;
+    padding: 0 !important;
+	height: 88vh;
 }
 
-@media (max-width: 559px) {
-
-    .slider-roll {
-        display: none;
-    }
-
-    .familyplanner-tab{
-        display: block;
-    }
-} */
