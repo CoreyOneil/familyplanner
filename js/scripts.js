@@ -7,6 +7,7 @@
 
 (function($) {
     let counter = 0;
+    let sliderSet = 0;
 
 
 
@@ -24,11 +25,14 @@
         img.eq(counter - 1).removeClass("current").addClass("previous");
         img.eq(counter - 2).removeClass("previous");
         img.eq((counter + 1) % numElements).addClass("next");
+        setTimeout (() =>{
+            slideController(sliderID);
+        }, 3000);
     }
 
     $(document).ready(function () {
         let sliderid = "familyplanner-slider";
         sliderController(sliderid);
-        setInterval(() => { sliderController(sliderid); }, 3000);
+        // setInterval(() => { sliderController(sliderid); }, 3000);
     });
 })( jQuery );
